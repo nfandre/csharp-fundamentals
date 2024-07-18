@@ -62,7 +62,7 @@ namespace EstruturaDados
             Clear();
 
 
-            WriteLine("##### Exemplo de Tuplas heterogencio (Város tipos de dados) ######");
+            WriteLine("##### Exemplo de Tuplas heterogenio (Város tipos de dados) ######");
             // ************************ ///
             // Estrutura de dados Tupla
             // Forma antiga antes do C# 7 

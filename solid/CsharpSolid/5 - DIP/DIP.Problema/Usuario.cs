@@ -14,6 +14,7 @@ namespace CsharpSolid.SOLID.DIP.Problema
         public bool IsValid()
         {
             //Depende da implementação de email e cpf service
+            //Depende da instancia concreta e não da abstração
             return EmailServices.IsValid(Email) && CPFServices.IsValid(CPF);
         }
     }

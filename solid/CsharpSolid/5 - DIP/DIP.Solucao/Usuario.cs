@@ -9,6 +9,7 @@ namespace CsharpSolid.SOLID.DIP.Solucao
         private readonly ICPFServices _cpfServices;
         private readonly IEmailServices _emailServices;
 
+        // Depende da abstração, utilza outros princípios SRP e ISP
         public Usuario(
             ICPFServices cpfServices, 
             IEmailServices emailServices)

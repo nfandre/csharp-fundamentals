@@ -7,7 +7,7 @@ namespace CsharpSolid.SOLID.DIP.Problema
         {
             if (!usuario.IsValid())
                 return "Dados inválidos";
-
+            // Depende da implementação e não da abstração
             var repo = new UsuarioRepository();
             repo.AdicionarUsuario(usuario);
 

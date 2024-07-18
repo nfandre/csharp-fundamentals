@@ -1,4 +1,4 @@
-# SOLID (Robert C. Martin)
+# SOLID (Robert C. Martin - "Uncle Bob")
 
 `S`ingle Responsability Principle
 

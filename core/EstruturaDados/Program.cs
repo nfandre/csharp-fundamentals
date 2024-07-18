@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using static System.Console;
 
 namespace EstruturaDados
@@ -8,6 +9,32 @@ namespace EstruturaDados
         static void Main(string[] args)
         {
             Clear();
+
+            WriteLine("###### Exemplo Lista comum vs Array list ######");
+
+            // tamanho fixo, value types elements, pode ser multidimensional, um pouco mais rápido que Arraylist
+            // Type safe - garante segurança do mesmo tipo de dado
+            int[] array = new int[4] { 1, 2, 3, 4 };
+
+            // tamanho dinamico, reference type elements, single-dimencional(dimensao unica), um pouco mais lento que Array
+            // not type safe
+            // Heterogenio (pode salvar objetos de diferentes tipos)
+            ArrayList arrayList = new ArrayList();
+            arrayList.Add("string");
+            arrayList.Add(10);
+            arrayList.Add(new object());
+            arrayList.Add(false);
+
+            
+            // Homogenio (pode salvar objetos de um único tipo)
+            // oferece mais suporte
+            // Type safe
+            // mais performance
+            List<int> list = new List<int>();
+
+
+
+
             WriteLine("###### Exemplo pilha  LIFO(Last in first out) ######");
             // ************************ ///
             // Estrutura de dados Pilha

@@ -140,6 +140,21 @@ class Program
 </details>
 
 
+### Generics
+
+```csharp
+public class Person {
+}
+public interface IPerson {
+}
+public class Context<T, L> 
+    where T: Person,
+    where L: IPerson
+{
+    public void Save(T entity){}
+}
+```
+
 ### Upcast e Downcast
 `Upcast`: possibilidade de tornar uma classe filha do tipo de uma classe pai
 

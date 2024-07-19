@@ -12,7 +12,7 @@ namespace EstruturaDados
 
             WriteLine("###### Exemplo Lista comum vs Array list ######");
 
-            // tamanho fixo, value types elements, pode ser multidimensional, um pouco mais rápido que Arraylist
+            // tamanho fixo, reference type elements, pode ser multidimensional, um pouco mais rápido que Arraylist
             // Type safe - garante segurança do mesmo tipo de dado
             int[] array = new int[4] { 1, 2, 3, 4 };
 

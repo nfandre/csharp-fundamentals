@@ -25,7 +25,7 @@ namespace CsharpPOO
         }
 
 
-        public string ResponderPresenca()
+        public virtual string ResponderPresenca()
         {
             return "Estou aqui";
         }

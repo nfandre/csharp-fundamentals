@@ -53,7 +53,7 @@ namespace CsharpPOO
 
 
         //Polimorfismo = assumir diferentes formas
-        public string ResponderPresenca()
+        public override string ResponderPresenca()
         {
             return "Bateu o ponto hoje";
         }

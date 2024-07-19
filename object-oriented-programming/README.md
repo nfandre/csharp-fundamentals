@@ -13,9 +13,7 @@
 
 #### Como acessar classe pai
 
-Utiliza base:
-
-
+Utiliza sintax abaixo `base`:
 
 ```csharp
     public class Aluno : Pessoa

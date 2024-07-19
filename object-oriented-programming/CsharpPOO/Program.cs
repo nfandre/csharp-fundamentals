@@ -2,10 +2,71 @@
 
 namespace CsharpPOO
 {
+    // Events
+    public class Room
+    {
+        public Room(int seats)
+        {
+            Seats = seats;
+            seatsInUse = 0;
+        }
+
+        private int seatsInUse = 0;
+
+        public int Seats { get; set; }
+
+        public void ReserveSeat()
+        {
+            seatsInUse++;
+            if (seatsInUse >= Seats)
+            {
+                // Evento fechado
+                OnRoomSoldOut(EventArgs.Empty);
+            }
+            else
+            {
+                Console.WriteLine("Assento liberado");
+            }
+        }
+
+        //handler = manipulador
+        public event EventHandler OnRoomSoldOutEvent;
+
+        protected virtual void OnRoomSoldOut(EventArgs e)
+        {
+            EventHandler handler = OnRoomSoldOutEvent;
+            handler?.Invoke(this, e);
+        }
+    }
+
     class Program
     {
+
+        static void Emprestar()
+        {
+            Console.WriteLine("emprestado");
+        }
+
+
+
+        static void OnRoomSoldOut(object sender, EventArgs e)
+        {
+            Console.WriteLine("Sala lotada");
+        }
+
         static void Main(string[] args)
         {
+
+            /// Events
+
+            var room = new Room(3);
+            room.OnRoomSoldOutEvent += OnRoomSoldOut;
+            room.ReserveSeat();
+            room.ReserveSeat();
+            room.ReserveSeat();
+            room.ReserveSeat();
+            room.ReserveSeat();
+
             Aluno aluno = new Aluno();
             aluno.Matricula = "abc22333";
             aluno.Idade = 22;
@@ -30,6 +91,26 @@ namespace CsharpPOO
 
             Console.WriteLine("Professor2 Valor hora: {0:c}", maria.CalcularSalarioFinal(120));
 
+
+            /// Garbage collect
+            // Forma manual
+            // Cria instancia na memória
+            Aluno aluno2 = new Aluno();
+            // remove elemento da memória
+            aluno2.Dispose();
+
+            // Forma automática
+            using(var aluno3 = new Aluno())
+            {
+                // remove elemento memória automáticamente
+            }
+
+
+            // Delegate
+            var alunoDelegate = new Aluno.Emprestar(Emprestar);
+            alunoDelegate();
+
+            Console.ReadKey();
         }
     }
 

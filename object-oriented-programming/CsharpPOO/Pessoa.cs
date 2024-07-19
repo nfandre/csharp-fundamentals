@@ -1,7 +1,7 @@
 ﻿using System;
 namespace CsharpPOO
 {
-	public class Pessoa
+	public class Pessoa: IDisposable, IEquatable<Pessoa>
 	{
 		public Pessoa()
 		{
@@ -9,8 +9,6 @@ namespace CsharpPOO
 		}
 		private string nome;
         private int idade;
-
-
 
         public string Nome
         {
@@ -24,12 +22,22 @@ namespace CsharpPOO
             set => idade = value;
         }
 
+        public delegate void Emprestar();
 
         public virtual string ResponderPresenca()
         {
             return "Estou aqui";
         }
 
+        public void Dispose()
+        {
+            Console.WriteLine("Destruindo classe memória");
+        }
+
+        public bool Equals(Pessoa other)
+        {
+            return nome == other.nome;
+        }
     }
 }
 

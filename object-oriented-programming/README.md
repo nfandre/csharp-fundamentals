@@ -64,6 +64,9 @@ class Program
 ```
 
 ### Events
+<details>
+    <summary>Exemplo prático</summary>
+
 ```csharp
 // Events
 public class Room
@@ -133,6 +136,9 @@ class Program
     }
 }
 ```
+
+</details>
+
 
 ### Upcast e Downcast
 `Upcast`: possibilidade de tornar uma classe filha do tipo de uma classe pai

@@ -7,7 +7,8 @@ namespace CsharpPOO
 	{
 		public Aluno()
 		{
-			
+			// classe pai
+			var nameFromHerance = base.Nome;
 		}
         private string matricula { get; set; }
 

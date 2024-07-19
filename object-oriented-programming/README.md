@@ -16,13 +16,11 @@
 Utiliza sintax abaixo `base`:
 
 ```csharp
-    public class Aluno : Pessoa
-	{
-		public Aluno()
-		{
-			var nameFromHerance = base.Nome;
-			
-		}
-
+public class Aluno : Pessoa
+{
+    public Aluno()
+    {
+        var nameFromHerance = base.Nome;
     }
+}
 ```
